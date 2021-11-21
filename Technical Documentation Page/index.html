@@ -1,0 +1,167 @@
+<link rel="stylesheet" href="styles.css">
+<nav id="navbar">
+    <header class="head">WP Documentation</header>
+    <ul>
+      <li><a class="nav-link" href="#Introduction">Introduction</a></li>
+      <li><a class="nav-link" href="#Our_story">Our Story</a></li>
+      <li><a class="nav-link" href="#Bill_of_Rights">Bill of Rights</a></li>
+      <li><a class="nav-link" href="#Download">Download</a></li>
+      <li><a class="nav-link" href="#Installation">Installation</a></li>
+      <li><a class="nav-link" href="#Linux">Linux</a></li>
+  
+      <li><a class="nav-link" href="#Common_Ιssues">Common Issues</a></li>
+    </ul>
+  </nav>
+  <main id="main-doc">
+    <section class="main-section" id="Introduction">
+      <header>Introduction</header>
+      <article>
+        <p>WordPress is software designed for everyone, emphasizing accessibility, performance, security, and ease of use. We believe great software should work with minimum set up, so you can focus on sharing your story, product, or services freely. The basic WordPress software is simple and predictable so you can easily get started. It also offers powerful features for growth and success.
+  
+          We believe in democratizing publishing and the freedoms that come with open source. Supporting this idea is a large community of people collaborating on and contributing to this project. The WordPress community is welcoming and inclusive. Our contributors’ passion drives the success of WordPress which, in turn, helps you reach your goals. </p>
+      </article>
+    </section>
+  
+    <section class="main-section" id="Our_story">
+      <header>Our story</header>
+      <article>
+  
+        <p> WordPress started in 2003 when Mike Little and Matt Mullenweg created a fork of b2/cafelog. The need for an elegant, well-architected personal publishing system was clear even then. Today, WordPress is built on PHP and MySQL, and licensed under the GPLv2. It is also the platform of choice for over 42% of all sites across the web.</p>
+        <p>
+  
+          The WordPress open source project has evolved in progressive ways over time — supported by skilled, enthusiastic developers, designers, scientists, bloggers, and more. WordPress provides the opportunity for anyone to create and share, from handcrafted personal anecdotes to world-changing movements. People with a limited tech experience can use it “out of the box”, and more tech-savvy folks can customize it in remarkable ways.
+        </p>
+      </article>
+    </section>
+    <section class="main-section" id="Bill_of_Rights">
+      <header>Bill of Rights</header>
+      <article>
+  
+        <p>WordPress is licensed under the General Public License (GPLv2 or later) which provides four core freedoms. Consider this the WordPress Bill of Rights: </p>
+        <ul>
+          <li>The 1st Freedom - To run the program for any purpose.</li>
+          <li>The 2nd Freedom - To study how the program works and change it to make it do what you wish.</li>
+          <li>The 3rd Freedom - To redistribute.</li>
+          <li>The 4th Freedom - To distribute copies of your modified versions to others.</li>
+        </ul>
+      </article>
+  
+    </section>
+  
+    <section class="main-section" id="Download">
+      <header>Download</header>
+      <article>
+        <p> Get WordPress</p>
+        <p>
+  
+          Use the software that powers over 42% of the web.</p>
+        <p>
+  
+          There are several ways to get WordPress. The easiest is through a hosting provider, but sometimes tech-savvy folks prefer to download and install it themselves.</p>
+        <p>
+  
+          Either way, you can use your WordPress through a web browser and with our mobile apps
+        </p>
+      </article>
+    </section>
+  
+    <section class="main-section" id="Installation">
+      <header>Installation</header>
+      <article>
+  
+        <p> Basic Instructions # Basic Instructions</p>
+        <p>
+  
+          Here’s the quick version of the instructions for those who are already comfortable with performing such installations. More detailed instructions follow.</p>
+        <p>
+  
+          Download and unzip the WordPress package if you haven’t already.</p>
+        <p>
+          Create a database for WordPress on your web server, as well as a MySQL (or MariaDB) user who has all privileges for accessing and modifying it.</p>
+        <p>
+          (Optional) Find and rename wp-config-sample.php to wp-config.php, then edit the file (see Editing wp-config.php) and add your database information.</p>
+        <p>
+          Note: If you are not comfortable with renaming files, step 3 is optional and you can skip it as the install program will create the wp-config.php file for you.</p>
+        <p>
+          Upload the WordPress files to the desired location on your web server:</p>
+        <p>
+          If you want to integrate WordPress into the root of your domain (e.g. http://example.com/), move or upload all contents of the unzipped WordPress directory (excluding the WordPress directory itself) into the root directory of your web server.</p>
+        <p>
+          If you want to have your WordPress installation in its own subdirectory on your website (e.g. http://example.com/blog/), create the blog directory on your server and upload the contents of the unzipped WordPress package to the directory via FTP.</p>
+        <p>
+          Note: If your FTP client has an option to convert file names to lower case, make sure it’s disabled.</p>
+        <p>
+          Run the WordPress installation script by accessing the URL in a web browser. This should be the URL where you uploaded the WordPress files.</p>
+        <p>
+          If you installed WordPress in the root directory, you should visit: http://example.com/</p>
+        <p>
+          If you installed WordPress in its own subdirectory called blog, for example, you should visit: http://example.com/blog/
+        </p>
+        <p>
+          That’s it! WordPress should now be installed.
+        </p>
+      </article>
+    </section>
+    <section class="main-section" id="Linux">
+      <header>Linux</header>
+      <article>
+        <p>What you’ll need
+  
+          A computer running Ubuntu Server 20.04 LTS
+          This guide will also show you how to configure a database for WordPress
+        </p>
+        <p>To install PHP and Apache, use following command:</p>
+        <code>sudo apt update</code><br>
+        <code>sudo apt install apache2\
+          ghostscript \
+          libapache2-mod-php \
+          mysql-server \
+          php \
+          php-bcmath \
+          php-curl \
+          php-imagick \
+          php-intl \
+          php-json \
+          php-mbstring \
+          php-mysql \
+          php-xml \
+          php-zip</code>
+        <p>
+  
+          We will use the release from WordPress.org rather than the APT package in the Ubuntu Archive, because this is the preferred method from upstream WordPress.
+        <p></p> This will also have fewer “gotcha” problems that the WordPress support volunteers will not be able to anticipate and therefore be unable to help with.
+  
+        Create the installation directory and download the file from WordPress.org:</p>
+  
+        <code>sudo mkdir -p /srv/www</code><br>
+        <code>sudo chown www-data: /srv/www</code><br>
+        <code>curl https://wordpress.org/latest.tar.gz | sudo -u www-data tar zx -C /srv/www</code>
+  
+      </article>
+    </section>
+    <section class="main-section" id="Common_Ιssues">
+      <header>Common Issues</header>
+      <article>
+  
+        <p>Nothing can sully your day quite like an unexpected error with your site. Thankfully, WordPress is generally a well-oiled machine that isn’t likely to throw errors at you for no reason. However, when a problem does appear, it can be frustrating, especially if you don’t know how to try and fix it.
+  
+          While many errors can seem intimidating at first glance, most WordPress issues stem from relatively small problems that are usually easy to deal with. As long as you understand the source of the problem, you can typically perform some basic troubleshooting on your own. If your problem is not listed here, you’ll want to check out the official list of common issues. Let’s start from the top! </p>
+        <ul>
+          <li>Parse Error/Syntax Error</li>
+          <li>White Screen of Death (WSoD)</li>
+          <li> Internal Server Error</li>
+          <li>404 Error</li>
+          <li>Error Establishing a Database Connection</li>
+          <li>Connection Timed Out Error</li>
+          <li>Your Site’s Sidebar Appears Below the Main Content</li>
+          <li>You are Unable to Upload Images</li>
+          <li>You are Unable to Access the Admin Area</li>
+          <li> WordPress Is Stuck in Maintenance Mode</li>
+          <li> Missed Scheduled Post Error</li>
+          <li>WordPress Failed to Auto-Update</li>
+  
+        </ul>
+      </article>
+  
+    </section>
+  </main>
